@@ -1,0 +1,20 @@
+<div class="marginLeft30">
+        <div class="marginTop50">
+          <form name="MyForm">
+            <div class="form-group">
+              <label >Name</label>
+              <input type="text" ng-model="newUser.name" class="form-control width50"  placeholder="Enter name" required>
+            
+              <label>In-Time</label>
+              <input type="number" min="0" max="23" ng-model="newUser.inTime" class="width50 form-control" placeholder="Enter In-time in 24hrs Format" required>
+    
+              <label>Out-Time</label>
+              <input type="number" min="0" max="23" ng-model="newUser.outTime" class="width50 form-control" placeholder="Enter Out-time in 24hrs Format" required>
+    
+              <label>Reason</label>
+              <input type="text" ng-model="newUser.reason" class="width50 form-control" placeholder="Enter Reason for visit" required>
+            </div>
+            <button type="submit" class="btn btn-primary marginLeft20" ng-disabled="MyForm.$invalid" ng-click="insertData()">Submit</button>
+          </form>
+        </div>
+</div>

@@ -1,0 +1,42 @@
+<div>
+    <h1 class="centerAlign">Registered users</h1><br/>
+    <form>
+    <div ng-show="data.length > 0">
+        <input type="text" class="searchStyle form-control" placeholder="Type here for searching in table.." ng-model="searchText" id="search"><br/>
+    </div>
+    <div ng-show="data.length > 0">
+        <table ng-table ="usersTable" class="table table-bordered tableFormat">
+            <thead class="thead-dark">
+                <tr class="tableHeaderStyle">
+                    <th class="centerAlign" scope="col">User Name</th>
+                    <th class="centerAlign" scope="col">Visiting Date</th>
+                    <th class="centerAlign" scope="col">In Time</th>
+                    <th class="centerAlign" scope="col"> Out Time </th>
+                    <th class="centerAlign" scope="col"> Reason for visit </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in data | filter:searchText | startFrom:currentPage*pageSize | limitTo:pageSize">
+                    <td class="centerAlign">  {{item.user_name}}  </td>
+                    <td class="centerAlign">  {{item.date}}  </td>
+                    <td class="centerAlign">  {{item.in_time}}  </td>
+                    <td class="centerAlign">  {{item.out_time}}  </td>
+                    <td class="centerAlign">  {{item.reason}}  </td>
+                </tr>
+           </tbody>
+        </table>
+    <div class="centerAlign" ng-show="data.length > 0">
+        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+        </button>
+        {{currentPage+1}}/{{numberOfPages()}}
+        <button ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+            Next
+        </button>
+    </div>
+    </div>
+    <div ng-show="data.length == 0">
+        <h3 class="centerAlign">No users found!</h3>
+    </div>
+    </form>
+</div> 

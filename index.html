@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myRegApp">
+    <head>
+        <title>Registration Application</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>  
+        <script src="controllers/app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+        <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script> -->
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Registration Application</a>
+                </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a ui-sref="home">Home</a></li>
+                        <li><a ui-sref="register">Register User</a></li>
+                        <li><a ui-sref="users">Show Users</a></li>
+                    </ul>               
+            </div>
+        </nav>
+        <div class="formatDiv">
+            <ui-view></ui-view>
+        </div>
+    </body>
+</html>

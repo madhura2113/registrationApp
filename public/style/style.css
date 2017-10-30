@@ -1,0 +1,37 @@
+.tableFormat{
+    width : 80% !important; 
+    margin-left : 50px
+}
+
+.centerAlign{
+    text-align : center
+}
+
+.searchStyle{
+    width:20% !important;
+    margin-left:50px
+}
+
+.formatDiv{
+    margin-top: 55px;
+  }
+
+.marginTop50{
+    margin-top:50px
+  }
+
+  .width50{
+    width:50% !important
+  }
+  .marginLeft20{
+    margin-left:20%
+  }
+
+  .marginLeft30{
+    margin-left:30%
+  }
+
+  .tableHeaderStyle{
+    background-color:dimgrey;
+    color:aliceblue
+  }
